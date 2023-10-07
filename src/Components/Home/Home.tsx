@@ -33,16 +33,20 @@ const Home = () => {
               textAlign: { xs: "center", sm: "justify" },
             }}
           >
-            {` Hi, I am John,\n Creative Technologist`}
+            {` Hi, I am Lokesh,\n Web Developer`}
           </Typography>
           <Typography
             variant="body2"
             flexWrap={"wrap"}
             sx={{ textAlign: { xs: "center", sm: "justify" } }}
           >
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam consequat sunt nostrud amet.
+            Results-driven React developer with 1.5 years of experience.
+            Proficient in React, JavaScript, Nest.js, HTML, and CSS. Skilled in
+            building scalable and responsive web applications. Passionate about
+            creating elegant and efficient solutions using the latest
+            technologies. Overall, my goal is to contribute to the success of
+            projects by leveraging my technical skills and problem-solving
+            abilities to develop robust and user-friendly applications.
           </Typography>
         </Stack>
 

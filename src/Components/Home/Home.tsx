@@ -1,7 +1,18 @@
+import { useState } from "react";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import RecentPosts from "../Sections/RecentPosts";
+import Loader from "../../Common/Loaders/Loader";
 
 const Home = () => {
+  const [isDownloading, setIsDownloading] = useState<boolean>(false);
+
+  const handleResumeDownload = () => {
+    setIsDownloading(true);
+    setTimeout(() => {
+      setIsDownloading(false);
+    }, 3000);
+  };
+
   return (
     <Box>
       <Stack
@@ -58,9 +69,16 @@ const Home = () => {
               backgroundColor: "pink",
               color: "black",
             },
+            "&:disabled": {
+              backgroundColor: "grey",
+              color: "white",
+            },
           }}
+          onClick={handleResumeDownload}
+          disabled={isDownloading}
         >
-          Download Resume
+          {" Download Resume "}
+          {isDownloading && <Loader size={22} />}
         </Button>
       </Box>
       <RecentPosts />

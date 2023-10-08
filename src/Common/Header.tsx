@@ -1,5 +1,6 @@
 import { Box, Button, Container, Stack } from "@mui/material";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 interface Props {
   navigationItems: prop[];
@@ -10,6 +11,19 @@ interface prop {
 }
 
 const Header = ({ navigationItems }: Props) => {
+  const location = useLocation();
+  const [url, setUrl] = useState<string>(location.pathname);
+
+  const handleActiveLink = (link: string) => {
+    if (url == link) {
+      return "red";
+    }
+  };
+
+  useEffect(() => {
+    setUrl(location.pathname);
+  }, [location.pathname]);
+
   return (
     <Container maxWidth="xl">
       <Box marginTop={3} sx={{ flexGrow: 1 }}>
@@ -18,7 +32,7 @@ const Header = ({ navigationItems }: Props) => {
             <Button
               key={item.link}
               size="small"
-              sx={{ color: "black" }}
+              sx={{ color: handleActiveLink(item.link) }}
               component={Link}
               to={item.link}
             >

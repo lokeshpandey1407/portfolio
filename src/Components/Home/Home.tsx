@@ -24,7 +24,7 @@ const Home = () => {
         alignItems={"center"}
         sx={{ justifyContent: { xs: "center", sm: "space-between" } }}
       >
-        <Stack spacing={2} width={"500px"}>
+        <Stack spacing={2} width={"600px"}>
           <Typography
             variant="h3"
             fontWeight={"bold"}

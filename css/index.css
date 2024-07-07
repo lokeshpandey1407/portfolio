@@ -1,0 +1,229 @@
+:root {
+  --primary-color: brown;
+  --text-primary-color: #363636;
+  --primary-line-height: 2rem;
+  --secondary-background-color: rgb(233, 233, 233);
+}
+
+body,
+* {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  scroll-behavior: smooth;
+  letter-spacing: 0.5px;
+}
+body {
+  margin-bottom: 2rem;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #343434;
+}
+.navbar {
+  height: 5rem;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px #cfcfcf;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 1.5rem;
+  color: var(--text-primary-color);
+}
+
+.nav_links {
+  list-style: none;
+  font-size: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3rem;
+}
+.link {
+  text-decoration: none;
+  color: #353535;
+  width: fit-content;
+  font-weight: bold;
+  transition: color 500ms ease;
+  transition: transform 200ms ease;
+}
+.link:hover {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+/* Common section stylling */
+.section {
+  padding-top: 5rem;
+  background-color: #fff;
+  min-height: calc(100dvh);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.section_title {
+  font-size: 2rem;
+  width: fit-content;
+  margin-bottom: 2rem;
+}
+.section_title:after {
+  content: "";
+  background-color: var(--primary-color);
+  height: 5px;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  width: 20%;
+  animation: pulse 2500ms ease-in-out infinite;
+}
+.section_subTitle {
+  max-width: 800px;
+  padding: 0px 2rem;
+  text-align: center;
+}
+@keyframes pulse {
+  0% {
+    width: 20%;
+  }
+  50% {
+    width: 100%;
+    background-color: rgba(165, 42, 42, 0.204);
+  }
+
+  100% {
+    width: 20%;
+  }
+}
+/* Home section stylling */
+
+.home {
+  background: url("../assets/geometry.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero_section {
+  text-align: center;
+  max-width: 800px;
+  padding: 0px 1rem;
+  color: #fff;
+}
+.title {
+  font-size: 3em;
+  margin-bottom: 2rem;
+  text-wrap: stable;
+}
+.sub_title {
+  line-height: var(--primary-line-height);
+}
+.btn {
+  all: unset;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  width: fit-content;
+  padding: 0.7rem 3rem;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 200ms ease;
+}
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-3px);
+}
+
+/* About section stylling */
+.aboutMe_container {
+  margin: 0px auto;
+  margin-top: 3rem;
+  max-width: 80%;
+  gap: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.aboutMe_container > * {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  line-height: var(--primary-line-height);
+}
+
+.skills_cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.skill {
+  background-color: var(--secondary-background-color);
+  border-radius: 5px;
+  padding: 0.3rem 1rem;
+  width: fit-content;
+  transition: background-color 200ms ease-in-out;
+}
+@keyframes lightBulb {
+  0% {
+    background-color: rgb(212, 212, 212);
+  }
+  50% {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+}
+.skill:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Contact Section */
+
+.contactForm {
+  max-width: 800px;
+  margin-top: 3rem;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  box-shadow: 1px 1px 20px 3px rgb(224, 224, 224);
+  padding: 2rem;
+}
+.formGroup {
+  font-size: 0.9rem;
+}
+.formGroup label {
+  font-weight: bold;
+}
+.input {
+  outline: none;
+  border: none;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--secondary-background-color);
+  border-radius: 5px;
+}
+.messageInput {
+  resize: none;
+}

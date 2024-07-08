@@ -169,6 +169,31 @@ body::-webkit-scrollbar-thumb {
   padding: 0px 2rem;
   text-align: center;
 }
+.socials {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  flex-direction: column;
+  width: fit-content;
+  gap: 1rem;
+  background-color: #fff;
+  padding: 0.5rem;
+}
+.social {
+  height: 25px;
+  aspect-ratio: 1;
+  transition: all 400ms ease-in-out;
+}
+.social:hover {
+  transform: scale(1.2);
+}
+@media (max-width: 586px) {
+  .socials {
+    display: none;
+  }
+}
 @keyframes pulse {
   0% {
     width: 20%;
@@ -312,4 +337,30 @@ body::-webkit-scrollbar-thumb {
 }
 .messageInput {
   resize: none;
+}
+.footer {
+  background-color: #000;
+  padding: 4rem;
+}
+.footer_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 100%;
+  gap: 3rem;
+}
+.footer_container h2 {
+  margin-bottom: 2rem;
+}
+.info {
+  color: #fff;
+}
+.social_info {
+  color: #fff;
+}
+.footer_socials {
+  display: flex;
+  flex-direction: row;
+  max-width: fit-content;
+  gap: 1rem;
 }

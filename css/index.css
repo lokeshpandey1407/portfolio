@@ -1,6 +1,7 @@
 :root {
   --primary-color: brown;
   --text-primary-color: #363636;
+  --text-secondary-color: #fff;
   --primary-line-height: 2rem;
   --secondary-background-color: #e9e9e9;
 }
@@ -17,9 +18,6 @@ body,
   scroll-behavior: smooth;
   letter-spacing: 0.5px;
 }
-body {
-  margin-bottom: 2rem;
-}
 body::-webkit-scrollbar {
   width: 5px;
 }
@@ -28,19 +26,18 @@ body::-webkit-scrollbar-thumb {
 }
 .navbar {
   height: 5rem;
-  background-color: #fff;
-  box-shadow: 1px 1px 4px #cfcfcf;
+  background-color: var(--text-primary-color);
+  box-shadow: 1px 1px 4px #343434;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0px 1.5rem;
-  color: var(--text-primary-color);
+  color: var(--text-secondary-color);
 }
 
 .nav_links {
@@ -53,11 +50,10 @@ body::-webkit-scrollbar-thumb {
 }
 .link {
   text-decoration: none;
-  color: #353535;
+  color: var(--text-secondary-color);
   width: fit-content;
   font-weight: bold;
   transition: color 500ms ease;
-  transition: transform 200ms ease;
 }
 .link:hover {
   color: var(--primary-color);
@@ -75,7 +71,7 @@ body::-webkit-scrollbar-thumb {
 .line {
   height: 3px;
   width: 100%;
-  background-color: #343434;
+  background-color: var(--text-secondary-color);
   border-radius: 5px;
   transition: all 500ms ease-in-out;
   /* transform-origin: center; */
@@ -282,7 +278,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Contact Section */
-
+.contact {
+  background: url("../assets/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 2rem;
+}
 .contactForm {
   max-width: 800px;
   margin-top: 3rem;

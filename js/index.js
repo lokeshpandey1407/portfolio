@@ -29,5 +29,13 @@ const handleHamburger = () => {
   }
 };
 
+const handleWindoResize = () => {
+  if (window.innerWidth > 586) {
+    handleCloseMenu();
+  }
+};
+
 hamburger.addEventListener("click", handleHamburger);
 navLinks.forEach((link) => link.addEventListener("click", handleCloseMenu));
+
+window.addEventListener("resize", handleWindoResize);

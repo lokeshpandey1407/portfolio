@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
+    <script src="./js/index.js" defer></script>
     <title>Lokesh Pandey</title>
   </head>
   <body>
@@ -18,10 +19,22 @@
       <ul class="nav_links">
         <a href="#home" class="link">HOME</a>
         <a href="#about" class="link">ABOUT</a>
-        <!-- <li class="link"><a href="#education">EDUCATION</a></li> -->
         <a href="#projects" class="link">PROJECTS</a>
         <a href="#contact" class="link">CONTACT</a>
       </ul>
+      <div class="hamburger">
+        <div class="first line"></div>
+        <div class="second line"></div>
+        <div class="third line"></div>
+      </div>
+      <div class="dropdown_menu_small">
+        <ul class="dropdown_nav_links">
+          <a href="#home" class="dropdown_link">HOME</a>
+          <a href="#about" class="dropdown_link">ABOUT</a>
+          <a href="#projects" class="dropdown_link">PROJECTS</a>
+          <a href="#contact" class="dropdown_link">CONTACT</a>
+        </ul>
+      </div>
     </nav>
     <!-- Home section -->
     <section id="home" class="section home">
@@ -53,20 +66,20 @@
             contribute, learn and grow. If you have a good opportunity that
             matches my skills and experience then don't hesitate to contact me.
           </p>
-          <button class="btn">CONTACT ME</button>
+          <a class="btn" href="#contact">CONTACT ME</a>
         </div>
         <div class="aboutMe_skills">
           <h2>Skills</h2>
           <div class="skills_cards">
-            <p class="skill">HTML</p>
-            <p class="skill">CSS</p>
-            <p class="skill">JavaScript</p>
-            <p class="skill">React</p>
-            <p class="skill">Redux</p>
-            <p class="skill">Node</p>
-            <p class="skill">Express</p>
-            <p class="skill">MongoDB</p>
-            <p class="skill">Mongoose</p>
+            <p class="skill" data-value="3">HTML</p>
+            <p class="skill" data-value="8">CSS</p>
+            <p class="skill" data-value="5">JavaScript</p>
+            <p class="skill" data-value="1">React</p>
+            <p class="skill" data-value="7">Redux</p>
+            <p class="skill" data-value="2">Node</p>
+            <p class="skill" data-value="6">Express</p>
+            <p class="skill" data-value="4">MongoDB</p>
+            <p class="skill" data-value="9">Mongoose</p>
           </div>
         </div>
       </div>

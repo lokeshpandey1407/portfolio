@@ -38,6 +38,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   padding: 0px 1.5rem;
   color: var(--text-secondary-color);
+  z-index: 10;
 }
 
 .nav_links {
@@ -171,7 +172,7 @@ body::-webkit-scrollbar-thumb {
 }
 .socials {
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
   left: 0;
@@ -301,8 +302,35 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
   color: #fff;
 }
+/* Projects Section stylling  */
 
-/* Contact Section */
+.projects_section_container {
+  display: flex;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding: 0px 3rem;
+  flex-direction: column;
+  gap: 5rem;
+}
+.project {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+.project > * {
+  flex: 1;
+  min-width: 300px;
+}
+.infoSection {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+/* Contact Section stylling */
 .contact {
   background: url("../assets/background.jpg");
   background-position: center;

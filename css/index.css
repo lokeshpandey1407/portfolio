@@ -320,6 +320,10 @@ body::-webkit-scrollbar-thumb {
   gap: 2rem;
   justify-content: center;
 }
+.imgSection img {
+  border: 2px solid black;
+  border-radius: 5px;
+}
 .project > * {
   flex: 1;
   min-width: 300px;

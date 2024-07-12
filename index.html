@@ -12,6 +12,12 @@
       rel="stylesheet"
     />
     <script src="./js/index.js" defer></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+      defer
+    ></script>
+    <script src="./js/emailService.js" defer></script>
     <title>Lokesh Pandey</title>
   </head>
   <body>
@@ -131,7 +137,12 @@
               <p class="skill" data-value="4">MongoDB</p>
               <p class="skill" data-value="9">Mongoose</p>
             </div>
-            <a href="" class="btn">VIEW</a>
+            <a
+              href="https://secure-auth-neon.vercel.app/signin"
+              target="_blank"
+              class="btn"
+              >VIEW</a
+            >
           </div>
         </div>
         <!-- PROJECT 2 -->
@@ -169,7 +180,11 @@
               <p class="skill" data-value="4">MongoDB</p>
               <p class="skill" data-value="9">Mongoose</p>
             </div>
-            <a href="" class="btn">VIEW</a>
+            <a
+              href="https://github.com/lokeshpandey1407/placementCellWebApplication"
+              class="btn"
+              >VIEW</a
+            >
           </div>
         </div>
       </div>
@@ -181,13 +196,15 @@
         Feel free to Contact me by submitting the form below and I will get back
         to you as soon as possible
       </p>
-      <form class="contactForm">
+      <form class="contactForm" id="contactForm">
+        <input type="text" value="Lokesh Pandey" name="to_name" hidden />
         <div class="formGroup">
           <label for="name">Name</label>
           <input
             class="nameInput input"
             type="text"
             id="name"
+            name="name"
             placeholder="Enter your Name"
             required
           />
@@ -198,6 +215,7 @@
             class="emailInput input"
             type="email"
             id="email"
+            name="email"
             placeholder="Enter your Email"
             required
           />
@@ -210,11 +228,12 @@
             type="text"
             rows="5"
             id="message"
+            name="message"
             placeholder="Enter your Message"
             required
           ></textarea>
         </div>
-        <button class="btn">SUBMIT</button>
+        <button class="btn submit">SUBMIT</button>
       </form>
     </section>
     <!-- Socials section -->

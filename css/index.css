@@ -5,18 +5,19 @@
   --primary-line-height: 2rem;
   --secondary-background-color: #e9e9e9;
 }
-
-body,
 * {
   margin: 0px;
   padding: 0px;
-  width: 100%;
   box-sizing: border-box;
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
   font-style: normal;
   scroll-behavior: smooth;
   letter-spacing: 0.5px;
+}
+
+body {
+  width: 100%;
 }
 body::-webkit-scrollbar {
   width: 5px;
@@ -247,6 +248,9 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
   transition: transform 200ms ease;
 }
+.btn:disabled {
+  background-color: rgb(203, 203, 203);
+}
 .btn:hover,
 .btn:focus-visible {
   transform: translateY(-3px);
@@ -318,9 +322,15 @@ body::-webkit-scrollbar-thumb {
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
+  padding: 0px 2rem;
   justify-content: center;
 }
+.imgSection {
+  max-width: 700px;
+}
 .imgSection img {
+  width: 100%;
+
   border: 2px solid black;
   border-radius: 5px;
 }
@@ -343,6 +353,7 @@ body::-webkit-scrollbar-thumb {
   padding-bottom: 2rem;
 }
 .contactForm {
+  width: 100%;
   max-width: 800px;
   margin-top: 3rem;
   background-color: #fff;
@@ -355,6 +366,8 @@ body::-webkit-scrollbar-thumb {
 }
 .formGroup {
   font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
 }
 .formGroup label {
   font-weight: bold;

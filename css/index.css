@@ -319,18 +319,19 @@ body::-webkit-scrollbar-thumb {
 .project {
   display: flex;
   flex-direction: row;
+  max-width: 80%;
+  margin: 0px auto;
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
-  padding: 0px 2rem;
   justify-content: center;
 }
 .imgSection {
+  align-self: center;
   max-width: 700px;
 }
 .imgSection img {
   width: 100%;
-
   border: 2px solid black;
   border-radius: 5px;
 }
@@ -390,6 +391,7 @@ body::-webkit-scrollbar-thumb {
 .footer_container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   max-width: 100%;
   gap: 3rem;
@@ -406,6 +408,7 @@ body::-webkit-scrollbar-thumb {
 .footer_socials {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   max-width: fit-content;
   gap: 1rem;
 }

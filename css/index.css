@@ -409,3 +409,24 @@ body::-webkit-scrollbar-thumb {
   max-width: fit-content;
   gap: 1rem;
 }
+/* Toast notification card styles */
+.toast_notification {
+  position: fixed;
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+  visibility: hidden;
+  opacity: 0;
+  top: -200px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(76, 157, 76);
+  border-radius: 5px;
+  max-width: 300px;
+  transition: all 300ms ease-in-out;
+}
+.toast_notification_open {
+  visibility: visible;
+  opacity: 1;
+  top: 200px;
+}
